@@ -22,7 +22,7 @@
 	    * Alignment model: score is based on the RNN hidden state and the annotation of the input sentence
     * Experiment: WMT'14 English-French
 
-* [Pointing the Unknown Words] (https://arxiv.org/abs/1603.08148)
+* [ Pointing the Unknown Words ](https://arxiv.org/abs/1603.08148)
     * Proposed method: Attention based model with two softmax layers to deal with rare/unknown words
     * Baseline: Neural Translation Modeul with attention
     * Pointer Softmax (PS):
