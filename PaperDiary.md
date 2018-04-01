@@ -35,7 +35,7 @@
 	generated; if the model chooses the location layer a context word's location is obtained.
 	    * A switching network to decide with layer to use, a binary variable trained MLP
     * Experiments: Summarization with Gigaword, Translation wirh Europarl
-    * Slight imporevements on both tasks
+    * Slight improvements on both tasks
 
 ## Text Summarization
 
