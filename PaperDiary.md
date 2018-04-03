@@ -16,10 +16,10 @@
 	* A decoder predicts the next word given the context vector c and previously generated words
     * Proposed model: Bidirectional RNN encoder-decoder
         * Encoder: BiRNN. Annotation of each word is the concatenation of the forward and backward hidden states
-	* Decoder: BiRNN.
-	    * The probability is conditioned on a distinct vector c_i for each target word y_i
-            * A vector c_i depends on a sequence of annotations, each annotation contains information about the whole input sequence
-	    * Alignment model: score is based on the RNN hidden state and the annotation of the input sentence
+        * Decoder: BiRNN.
+	      * The probability is conditioned on a distinct vector c_i for each target word y_i
+	      * A vector c_i depends on a sequence of annotations, each annotation contains information about the whole input sequence
+	      * Alignment model: score is based on the RNN hidden state and the annotation of the input sentence
     * Experiment: WMT'14 English-French
 
 * [ Pointing the Unknown Words ](https://arxiv.org/abs/1603.08148)
@@ -27,13 +27,12 @@
     * Baseline: Neural Translation Modeul with attention
     * Pointer Softmax (PS):
         * can predict whether it is necessary to use the pointing
-	* can point any location of the context sequence (length varies)
-	* Two softmax Layer :
-	    * Shortlist Layer: Typical softmax layer with shortlist
-	    * Location Layer: Pointer network, points location in the context
-	* At each time step, if the model chooses the shortlist layer a word is
-	generated; if the model chooses the location layer a context word's location is obtained.
-	    * A switching network to decide with layer to use, a binary variable trained MLP
+        * can point any location of the context sequence (length varies)
+        * Two softmax Layer :
+	      * Shortlist Layer: Typical softmax layer with shortlist
+	      * Location Layer: Pointer network, points location in the context
+        * At each time step, if the model chooses the shortlist layer a word is generated; if the model chooses the location layer a context word's location is obtained.
+        * A switching network to decide with layer to use, a binary variable trained MLP
     * Experiments: Summarization with Gigaword, Translation wirh Europarl
     * Slight improvements on both tasks
 
@@ -69,8 +68,8 @@
         * A RNN encoder to build the representation for questions and passage: biRNN with GRU, also
 	        character and word embedding concatenated for vector representations
         * Gated attention-based RNN: match the question and passage,generates question-aware passage representation
-	* Self-matching attention: matches the question-aware passage representation to itself again
-	* Output layer: the pointer network to predict the boundary of the answer in the passage
+        * Self-matching attention: matches the question-aware passage representation to itself again
+        * Output layer: the pointer network to predict the boundary of the answer in the passage
     * Training: Initialization with Glove, 1-layer biGRU for character embeddings, 3-layer RNN for word embeddings
     * Datasets: Squad, MS-Marco
 
@@ -81,12 +80,12 @@
     * Residual Learning:
         * rather than expect stacked layers to approximate H(x), desired underlying mappings,
 	we explicitly let these layers approximate a residual function F(x)=H(x)-x
-	* If the identity mappings are optimal, the solvers may simply drive the weights
+        * If the identity mappings are optimal, the solvers may simply drive the weights
 	of the multiple nonlinear layers towards zero to approach identity mappings.
     * Experiments: ImageNet
         * Comparison between PlainNet (18 and 34 layers) and ResNet (18 and 34 Layers )
-	* 34Layer Resnet is better than 18Layer Resnet
-	* 18Layer Resnet converges faster than 18Layer PlainNet
-	* 34Layer Plain Net is worse than 18 Layer Plain Net
+        * 34Layer Resnet is better than 18Layer Resnet
+        * 18Layer Resnet converges faster than 18Layer PlainNet
+        * 34Layer Plain Net is worse than 18 Layer Plain Net
     * Experiments: CIFAR10, MSCOCO,PASCAL
     * 1st place in ILSVRC (2015)
