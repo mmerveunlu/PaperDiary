@@ -73,3 +73,20 @@
 	* Output layer: the pointer network to predict the boundary of the answer in the passage
     * Training: Initialization with Glove, 1-layer biGRU for character embeddings, 3-layer RNN for word embeddings
     * Datasets: Squad, MS-Marco
+
+# Vision/Image
+
+* [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
+    * proposed to handle degradation problem (deeper networks have higher training errors)
+    * Residual Learning:
+        * rather than expect stacked layers to approximate H(x), desired underlying mappings,
+	we explicitly let these layers approximate a residual function F(x)=H(x)-x
+	* If the identity mappings are optimal, the solvers may simply drive the weights
+	of the multiple nonlinear layers towards zero to approach identity mappings.
+    * Experiments: ImageNet
+        * Comparison between PlainNet (18 and 34 layers) and ResNet (18 and 34 Layers )
+	* 34Layer Resnet is better than 18Layer Resnet
+	* 18Layer Resnet converges faster than 18Layer PlainNet
+	* 34Layer Plain Net is worse than 18 Layer Plain Net
+    * Experiments: CIFAR10, MSCOCO,PASCAL
+    * 1st place in ILSVRC (2015)
