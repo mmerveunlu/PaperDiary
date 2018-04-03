@@ -22,7 +22,7 @@
 	    * Alignment model: score is based on the RNN hidden state and the annotation of the input sentence
     * Experiment: WMT'14 English-French
 
-* [Pointing the Unknown Words] (https://arxiv.org/abs/1603.08148)
+* [ Pointing the Unknown Words ](https://arxiv.org/abs/1603.08148)
     * Proposed method: Attention based model with two softmax layers to deal with rare/unknown words
     * Baseline: Neural Translation Modeul with attention
     * Pointer Softmax (PS):
@@ -35,7 +35,7 @@
 	generated; if the model chooses the location layer a context word's location is obtained.
 	    * A switching network to decide with layer to use, a binary variable trained MLP
     * Experiments: Summarization with Gigaword, Translation wirh Europarl
-    * Slight imporevements on both tasks
+    * Slight improvements on both tasks
 
 ### Text Summarization
 
@@ -73,18 +73,3 @@
 	* Output layer: the pointer network to predict the boundary of the answer in the passage
     * Training: Initialization with Glove, 1-layer biGRU for character embeddings, 3-layer RNN for word embeddings
     * Datasets: Squad, MS-Marco
-
-# Vision/Image
-
-* [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
-    * proposed to handle degragation problem (deeper networks have higher training error)
-    * Residual Learning:
-        * rather than expect stacked layers to approximate H(x), we explicitly let these
-	layers approxinmate a residual function F(x)=H(x)-x
-	* If the identity mappings are optimal, the solvers may simply drive the weights
-	of the multiple nonlinear layers toward zero to approach identity mappings.
-    * Experiments: compared with PlainNet and ResNet
-        * ImageNet dataset: 34-layer Resnet is better than 18Layer Resnet and PlainNet
-	    * 18Resnet converges faster than 18PlainNet
-	* CIFAR 10, Pascal, MSCOCO
-    * 1st place in ILSVCR (2015)
