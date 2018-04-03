@@ -1,6 +1,6 @@
 # Papers
 
-
+## NLP 
 * [ Pointer Networks](http://papers.nips.cc/paper/5866-pointer-networks.pdf)
     * PtrNet is a variation of sequence-to-sequence models with attention
     * Baseline: seq2seq and input-attention models
@@ -8,8 +8,8 @@
     * Problems: Convex Hull, Delaunay Triangulation, TSP
     * Additional Info: [Introduction to pointer networks](http://fastml.com/introduction-to-pointer-networks/) 
 
-
-## Machine translation 
+ 
+### Machine translation 
 * [ Neural  machine  translation  by jointly  learning  to  align  and  translate](https://arxiv.org/pdf/1409.0473.pdf)
     * Previous models: RNN encoder-decoder
         * An encoder reads the input into a vector c
@@ -37,7 +37,7 @@
     * Experiments: Summarization with Gigaword, Translation wirh Europarl
     * Slight imporevements on both tasks
 
-## Text Summarization
+### Text Summarization
 
 * [ A Neural Attention Model for Abstractive Sentence Summarization](https://arxiv.org/abs/1509.00685)
     * Model generates each word of the summary conditioned on the input sentence.
@@ -61,7 +61,7 @@
     * RAS achieves better results than ABS
 
 
-## Squad
+### Squad
 
 * [R-NET: Machine Reading Comprehension with Self-matching Networks ](https://www.microsoft.com/en-us/research/publication/mrc/)
     * An end-to-end neural network for reading comprehension and question answering
@@ -73,3 +73,18 @@
 	* Output layer: the pointer network to predict the boundary of the answer in the passage
     * Training: Initialization with Glove, 1-layer biGRU for character embeddings, 3-layer RNN for word embeddings
     * Datasets: Squad, MS-Marco
+
+# Vision/Image
+
+* [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
+    * proposed to handle degragation problem (deeper networks have higher training error)
+    * Residual Learning:
+        * rather than expect stacked layers to approximate H(x), we explicitly let these
+	layers approxinmate a residual function F(x)=H(x)-x
+	* If the identity mappings are optimal, the solvers may simply drive the weights
+	of the multiple nonlinear layers toward zero to approach identity mappings.
+    * Experiments: compared with PlainNet and ResNet
+        * ImageNet dataset: 34-layer Resnet is better than 18Layer Resnet and PlainNet
+	    * 18Resnet converges faster than 18PlainNet
+	* CIFAR 10, Pascal, MSCOCO
+    * 1st place in ILSVCR (2015)
