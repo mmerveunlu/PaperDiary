@@ -89,3 +89,11 @@
         * 34Layer Plain Net is worse than 18 Layer Plain Net
     * Experiments: CIFAR10, MSCOCO,PASCAL
     * 1st place in ILSVRC (2015)
+
+* [Highway Networks](https://arxiv.org/pdf/1505.00387.pdf)
+    * The proposed method enables the optimization of the deep networks with a learned gating mechanism for regulating the information flow.
+    * Additionally added two nonlinear transforms to the input, called Transform gate and Carry gate, shows how much of the input is transformed and carried to form the output
+    * Experiments: MNIST, CIFAR 
+        * Optimization: Highway is better than plain network when depth is increased
+        * Classification: Highway is easier to train than FitNets  
+    
