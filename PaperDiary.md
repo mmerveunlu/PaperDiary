@@ -105,5 +105,5 @@
         * In DenseNets: H_l is the composite of thre functions: Batch Normalization, Relu and 3x3 ConvNet
     * Experiments: CIFAR, SVHN, ImageNet
         * state-of-the-art results in CIFAR10 and CIFAR100
-	* DenseNets perform better as L and k increase (L number of layers, k number of feature maps)
+        * DenseNets perform better as L and k increase (L number of layers, k number of feature maps)
     * Conclusion: Deep Supervision (??)
