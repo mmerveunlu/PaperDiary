@@ -97,3 +97,13 @@
         * Optimization: Highway is better than plain network when depth is increased
         * Classification: Highway is easier to train than FitNets  
     
+* [Densely Connected Convolutional Networks](http://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf)
+    * Proposed method DenseNets
+    * connects all layers directly each other to ensure maximum information flow
+    * Each layer obtains additionnal inputs from all preceding layers and passes its own features maps to all others
+    * For x_l is the output of the layer l, x_l = H_l([x_0x_1...x_(l-1)]) where H_l is the non-linear transformation
+        * In DenseNets: H_l is the composite of thre functions: Batch Normalization, Relu and 3x3 ConvNet
+    * Experiments: CIFAR, SVHN, ImageNet
+        * state-of-the-art results in CIFAR10 and CIFAR100
+	* DenseNets perform better as L and k increase (L number of layers, k number of feature maps)
+    * Conclusion: Deep Supervision (??)
