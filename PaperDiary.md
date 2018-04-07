@@ -1,5 +1,12 @@
 # Papers
 
+* [HyperNetworks](https://arxiv.org/pdf/1609.09106.pdf)
+    * hypernetworks generate the weights of a larger network
+    * takes a set of inputs that contain information about the structure of the weights
+    and generates the weight of the layer
+    * Methods: hypernetworks for deep convolutional networks, dynamic hypernetwors for RNN
+    * ExperimentsL: CIFAR10, Penn Treebank Language modelling, Hutter Prize Wikipedia LM, Handwriting sequence learning, Neural ML
+
 ## NLP 
 * [ Pointer Networks](http://papers.nips.cc/paper/5866-pointer-networks.pdf)
     * PtrNet is a variation of sequence-to-sequence models with attention
