@@ -66,7 +66,14 @@
     * Dataset: Gigaword, DUC 2004
     * RAS achieves better results than ABS
 
-
+* [Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/abs/1704.04368)
+    * Pointer generator model with coverage
+    * Baseline is sequence to sequence attention model
+    * The PointerGenerator model is a hybrid between the baseline and the pointer networks
+    * The covarge is added to overcome the repetition problem of seq2seq models
+    * Dataset: CNN/Daily Mail
+    * PointerGenerator is better than baseline and the abstractive models, but extractive models are still better on Rouge score.
+    
 ### Squad
 
 * [R-NET: Machine Reading Comprehension with Self-matching Networks ](https://www.microsoft.com/en-us/research/publication/mrc/)
