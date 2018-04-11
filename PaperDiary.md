@@ -74,7 +74,7 @@
     * Dataset: CNN/Daily Mail
     * PointerGenerator is better than baseline and the abstractive models, but extractive models are still better on Rouge score.
     
-### Squad
+### Question-Answering / Reading Comprehension
 
 * [R-NET: Machine Reading Comprehension with Self-matching Networks ](https://www.microsoft.com/en-us/research/publication/mrc/)
     * An end-to-end neural network for reading comprehension and question answering
@@ -86,6 +86,17 @@
         * Output layer: the pointer network to predict the boundary of the answer in the passage
     * Training: Initialization with Glove, 1-layer biGRU for character embeddings, 3-layer RNN for word embeddings
     * Datasets: Squad, MS-Marco
+
+* [Attention-over-Attention Neural Networks for Reading Comprehension(2017)](https://arxiv.org/pdf/1607.04423.pdf)
+    * Task: Cloze-stype RC, there are triples as (Document,Query,Answer)
+    * Attention over document-level attention
+    * Model consists of:
+        * Embedding: shared with document and query, biRNN, GRU
+	* Matching between context vectors: Pairwise mathing between one document word and one query word by dot product
+	* Document-to-query attention: column-wise softmax applied on the matching matrix
+	* Query-to-document attention: row-wise softmax applied on the matching matrix
+	* N-best reranking
+    * Datasets: CNN/Daily Mail, Children's book RC
 
 # Vision/Image
 
