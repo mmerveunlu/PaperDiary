@@ -98,6 +98,14 @@
 	* N-best reranking
     * Datasets: CNN/Daily Mail, Children's book RC
 
+* [Machine Comprehension using MatchLSM and Answer Pointer(2017)](https://arxiv.org/pdf/1608.07905.pdf)
+    * Data: A passage, embedded into dxP matrix where P is the length of the passage. A question, embedded into dxQ matrix where Q is the length of the question and d is the embedding dim. The answer can be : 
+        * A sequence of integers which indicate the positions of the answer's words in the passage ==> Sequence Model
+        * Two integeres which indicate the start and end positions of the answer in the passage ==> Boundary Model
+    * Model has 3 layers: LSTM preprocessing (for embeddings), Match LSTM (shows the degree of matching between a token of a passage and a token of the question), Answer Pointer (based PointerNetworks)
+    * Experiments: Initialization with glove, embeddings are not learned 
+    * Dataset: Squad  ==> Results: F1 77%, exact Match 67.6%
+    
 # Vision/Image
 
 * [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
