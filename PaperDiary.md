@@ -73,6 +73,13 @@
     * The covarge is added to overcome the repetition problem of seq2seq models
     * Dataset: CNN/Daily Mail
     * PointerGenerator is better than baseline and the abstractive models, but extractive models are still better on Rouge score.
+
+* [Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond (2016)](https://arxiv.org/pdf/1602.06023.pdf)
+    * Attentional encoder-decoder RNN 
+    * To handle the bottleneck at softmax: the decoder vocabulary is restricted to the words in the source documents at each minibatch
+    * Feature rich encoder: TF, IDF, Pos, NER added to the word features 
+    * a switch added to indicate either choose from the source document or choose from the vocabulary 
+    * Dataset: Gigaword, DUC, CNN/Daily Mail
     
 ### Question-Answering / Reading Comprehension
 
