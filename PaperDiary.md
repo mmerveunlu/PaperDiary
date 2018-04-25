@@ -12,7 +12,7 @@
     * Learning vector representation with neural network architectures
     * Two novel architecture is proposed:
         * CBOW: predicts the current word based on the context
-	* SkipGram: predicts the surrounding words given the current word
+        * SkipGram: predicts the surrounding words given the current word
     * Tested on several semantic and syntactic tasks
 
 * [ Pointer Networks](http://papers.nips.cc/paper/5866-pointer-networks.pdf)
