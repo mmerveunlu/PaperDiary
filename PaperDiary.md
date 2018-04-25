@@ -7,7 +7,14 @@
     * Methods: hypernetworks for deep convolutional networks, dynamic hypernetwors for RNN
     * ExperimentsL: CIFAR10, Penn Treebank Language modelling, Hutter Prize Wikipedia LM, Handwriting sequence learning, Neural ML
 
-## NLP 
+## NLP
+* [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
+    * Learning vector representation with neural network architectures
+    * Two novel architecture is proposed:
+        * CBOW: predicts the current word based on the context
+	* SkipGram: predicts the surrounding words given the current word
+    * Tested on several semantic and syntactic tasks
+
 * [ Pointer Networks](http://papers.nips.cc/paper/5866-pointer-networks.pdf)
     * PtrNet is a variation of sequence-to-sequence models with attention
     * Baseline: seq2seq and input-attention models
