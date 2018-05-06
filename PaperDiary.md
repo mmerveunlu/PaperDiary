@@ -163,7 +163,7 @@
     * The prediction model is stacked LSTM, error vectors are modelled to fit multivariate Gaussian.
     * Experiments: ECG, Space Shuttle Marotta, Multisensor engine data
 
-* [Collective Anomaly Detection based on Long Short Term Memory Recurrent Neural Network](https://arxiv.org/pdf/1703.09752.pdf)
+* [Collective Anomaly Detection based on Long Short Term Memory Recurrent Neural Network(2017)](https://arxiv.org/pdf/1703.09752.pdf)
     * Collective AD: a collection of related anomalous data instances with respect to the whole dataset
     * A collective AD is detected if the density of anomalous point within a time and the avreage relative error rate 
     are both higher then a predefined thresholds.
