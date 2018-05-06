@@ -162,3 +162,11 @@
     * A predictor models the normal behaviour, the prediction errors are used to identify abnormal behaviour
     * The prediction model is stacked LSTM, error vectors are modelled to fit multivariate Gaussian.
     * Experiments: ECG, Space Shuttle Marotta, Multisensor engine data
+
+* [Collective Anomaly Detection based on Long Short Term Memory Recurrent Neural Network](https://arxiv.org/pdf/1703.09752.pdf)
+    * Collective AD: a collection of related anomalous data instances with respect to the whole dataset
+    * A collective AD is detected if the density of anomalous point within a time and the avreage relative error rate 
+    are both higher then a predefined thresholds.
+    * Thresholds are computed from the validation sets
+    * To detect collective AD, circular array is defined: containts the latest minimum attack time error values, represents the level of anomaly of the latest time steps. 
+    * Experiments: KDD 1999 dataset, DOS attacks
