@@ -170,3 +170,10 @@
     * Thresholds are computed from the validation sets
     * To detect collective AD, circular array is defined: containts the latest minimum attack time error values, represents the level of anomaly of the latest time steps. 
     * Experiments: KDD 1999 dataset, DOS attacks
+   
+* [Explaining and Harnessing Adversarial Examples(2015)](https://arxiv.org/pdf/1412.6572.pdf)
+    * Adversarial examples: inputs formed by applying small bt intentionally worst-case perturbations to examples from dataset
+    * Problem: Neural Networks are vulnerable to adv. examples 
+    * Fast-gradient sign method: a method to generate adversarial example 
+    * Adversarial training can result in regularization 
+    * Ensembles, linear models, models trained to model the input distributions are vulnerable to adv. examples, but RBF are resistants 
