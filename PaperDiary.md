@@ -1,12 +1,5 @@
 # Papers
 
-* [HyperNetworks](https://arxiv.org/pdf/1609.09106.pdf)
-    * hypernetworks generate the weights of a larger network
-    * takes a set of inputs that contain information about the structure of the weights
-    and generates the weight of the layer
-    * Methods: hypernetworks for deep convolutional networks, dynamic hypernetwors for RNN
-    * ExperimentsL: CIFAR10, Penn Treebank Language modelling, Hutter Prize Wikipedia LM, Handwriting sequence learning, Neural ML
-
 ## NLP
 * [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
     * Learning vector representation with neural network architectures
@@ -154,3 +147,18 @@
         * state-of-the-art results in CIFAR10 and CIFAR100
         * DenseNets perform better as L and k increase (L number of layers, k number of feature maps)
     * Conclusion: Deep Supervision (??)
+    
+## Others 
+
+* [HyperNetworks](https://arxiv.org/pdf/1609.09106.pdf)
+    * hypernetworks generate the weights of a larger network
+    * takes a set of inputs that contain information about the structure of the weights
+    and generates the weight of the layer
+    * Methods: hypernetworks for deep convolutional networks, dynamic hypernetwors for RNN
+    * ExperimentsL: CIFAR10, Penn Treebank Language modelling, Hutter Prize Wikipedia LM, Handwriting sequence learning, Neural ML
+
+* [Long Short Term Memory Networks for Anomaly Detection in Time Series (2015)](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2015-56.pdf)
+    * detecting changes in the underlying distribution using LSTM 
+    * A predictor models the normal behaviour, the prediction errors are used to identify abnormal behaviour
+    * The prediction model is stacked LSTM, error vectors are modelled to fit multivariate Gaussian.
+    * Experiments: ECG, Space Shuttle Marotta, Multisensor engine data
