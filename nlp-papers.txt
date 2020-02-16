@@ -1,5 +1,3 @@
-# Papers
-
 ## NLP
 * [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
     * Learning vector representation with neural network architectures
@@ -112,68 +110,3 @@
     * Model has 3 layers: LSTM preprocessing (for embeddings), Match LSTM (shows the degree of matching between a token of a passage and a token of the question), Answer Pointer (based PointerNetworks)
     * Experiments: Initialization with glove, embeddings are not learned 
     * Dataset: Squad  ==> Results: F1 77%, exact Match 67.6%
-    
-# Vision/Image
-
-* [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
-    * proposed to handle degradation problem (deeper networks have higher training errors)
-    * Residual Learning:
-        * rather than expect stacked layers to approximate H(x), desired underlying mappings,
-	we explicitly let these layers approximate a residual function F(x)=H(x)-x
-        * If the identity mappings are optimal, the solvers may simply drive the weights
-	of the multiple nonlinear layers towards zero to approach identity mappings.
-    * Experiments: ImageNet
-        * Comparison between PlainNet (18 and 34 layers) and ResNet (18 and 34 Layers )
-        * 34Layer Resnet is better than 18Layer Resnet
-        * 18Layer Resnet converges faster than 18Layer PlainNet
-        * 34Layer Plain Net is worse than 18 Layer Plain Net
-    * Experiments: CIFAR10, MSCOCO,PASCAL
-    * 1st place in ILSVRC (2015)
-
-* [Highway Networks](https://arxiv.org/pdf/1505.00387.pdf)
-    * The proposed method enables the optimization of the deep networks with a learned gating mechanism for regulating the information flow.
-    * Additionally added two nonlinear transforms to the input, called Transform gate and Carry gate, shows how much of the input is transformed and carried to form the output
-    * Experiments: MNIST, CIFAR 
-        * Optimization: Highway is better than plain network when depth is increased
-        * Classification: Highway is easier to train than FitNets  
-    
-* [Densely Connected Convolutional Networks](http://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf)
-    * Proposed method DenseNets
-    * connects all layers directly each other to ensure maximum information flow
-    * Each layer obtains additionnal inputs from all preceding layers and passes its own features maps to all others
-    * For x_l is the output of the layer l, x_l = H_l([x_0x_1...x_(l-1)]) where H_l is the non-linear transformation
-        * In DenseNets: H_l is the composite of thre functions: Batch Normalization, Relu and 3x3 ConvNet
-    * Experiments: CIFAR, SVHN, ImageNet
-        * state-of-the-art results in CIFAR10 and CIFAR100
-        * DenseNets perform better as L and k increase (L number of layers, k number of feature maps)
-    * Conclusion: Deep Supervision (??)
-    
-## Others 
-
-* [HyperNetworks](https://arxiv.org/pdf/1609.09106.pdf)
-    * hypernetworks generate the weights of a larger network
-    * takes a set of inputs that contain information about the structure of the weights
-    and generates the weight of the layer
-    * Methods: hypernetworks for deep convolutional networks, dynamic hypernetwors for RNN
-    * ExperimentsL: CIFAR10, Penn Treebank Language modelling, Hutter Prize Wikipedia LM, Handwriting sequence learning, Neural ML
-
-* [Long Short Term Memory Networks for Anomaly Detection in Time Series (2015)](https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2015-56.pdf)
-    * detecting changes in the underlying distribution using LSTM 
-    * A predictor models the normal behaviour, the prediction errors are used to identify abnormal behaviour
-    * The prediction model is stacked LSTM, error vectors are modelled to fit multivariate Gaussian.
-    * Experiments: ECG, Space Shuttle Marotta, Multisensor engine data
-
-* [Collective Anomaly Detection based on Long Short Term Memory Recurrent Neural Network(2017)](https://arxiv.org/pdf/1703.09752.pdf)
-    * Collective AD: a collection of related anomalous data instances with respect to the whole dataset
-    * A collective AD is detected if the density of anomalous point within a time and the avreage relative error rate 
-    are both higher then a predefined thresholds.
-    * Thresholds are computed from the validation sets
-    * To detect collective AD, circular array is defined: containts the latest minimum attack time error values, represents the level of anomaly of the latest time steps. 
-    * Experiments: KDD 1999 dataset, DOS attacks
-   
-* [Explaining and Harnessing Adversarial Examples(2015)](https://arxiv.org/pdf/1412.6572.pdf)
-    * Adversarial examples: inputs formed by applying small bt intentionally worst-case perturbations to examples from dataset
-    * Problem: Neural Networks are vulnerable to adv. examples 
-    * Fast-gradient sign method: a method to generate adversarial example 
-    * Adversarial training can result in regularization 
-    * Ensembles, linear models, models trained to model the input distributions are vulnerable to adv. examples, but RBF are resistants 
