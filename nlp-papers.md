@@ -11,10 +11,10 @@
     * Two steps: pre-training, fine-tuning
     * Pre-training: train the model on unlabeled data
         * Masked LM: randomly mask tokens and predict masked ones
-	* Next Sentence Prediction: to understand sentence relations, predict if a sentence is the actual next sentence or not
+        * Next Sentence Prediction: to understand sentence relations, predict if a sentence is the actual next sentence or not
     * Fine-tuning: for a task, plug the task specific input/output and fine-tune all parameters
         * QA: input question and passage as a single pack, tested in Squad v1.1 and v2.0
-	* GLUE, SWAG
+        * GLUE, SWAG
 
 * [ Pointer Networks](http://papers.nips.cc/paper/5866-pointer-networks.pdf)
     * PtrNet is a variation of sequence-to-sequence models with attention
