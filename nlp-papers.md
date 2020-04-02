@@ -1,11 +1,6 @@
 ## NLP
-* [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)
-    * Learning vector representation with neural network architectures
-    * Two novel architecture is proposed:
-        * CBOW: predicts the current word based on the context
-        * SkipGram: predicts the surrounding words given the current word
-    * Tested on several semantic and syntactic tasks
-* [ALBERT:A Lite BERT for Self-Supervised Learning of Language Representations(2020)](https://arxiv.org/pdf/1909.11942.pdf)
+
+* [ALBERT:A Lite BERT for Self-Supervised Learning of Language Representations (2020)](https://arxiv.org/pdf/1909.11942.pdf)
     * proposed 2 parameter reduction techniques for BERT and achieve better performance
         * Factorized embedding parameterization: decomposing embeddings into two smaller matrices
 	* Cross-layer parameter sharing:  sharing parameters across FFN layers and attention layers
@@ -14,7 +9,7 @@
 	* swapped version of the positive example as negative
     * Overall: with less parameters (70%) than BERT, improvements on tasks SQuAD, MNLI, SST-2, RACE 
 
-* [BERT: Pre-training of Deep Bidirectional Transformers forLanguage Understanding](https://arxiv.org/abs/1810.04805)
+* [BERT: Pre-training of Deep Bidirectional Transformers forLanguage Understanding (2018)](https://arxiv.org/abs/1810.04805)
     * Language model representation with multilayer bidirectional transformer encoder
     * Two steps: pre-training, fine-tuning
     * Pre-training: train the model on unlabeled data
@@ -28,16 +23,15 @@
     * Unsupervised pre-training with multilayer Transformers instead of LSTM, to capture longer range linguistic structure
     * Supervised fine-tuning on a specific task as QA, NLI, classification etc. 
 
-* [ Pointer Networks](http://papers.nips.cc/paper/5866-pointer-networks.pdf)
-    * PtrNet is a variation of sequence-to-sequence models with attention
-    * Baseline: seq2seq and input-attention models
-    * The output of PtrNet is discrete and the length depends on the input's length
-    * Problems: Convex Hull, Delaunay Triangulation, TSP
-    * Additional Info: [Introduction to pointer networks](http://fastml.com/introduction-to-pointer-networks/) 
-
+* [Efficient Estimation of Word Representations in Vector Space (2013)](https://arxiv.org/pdf/1301.3781.pdf)
+    * Learning vector representation with neural network architectures
+    * Two novel architecture is proposed:
+        * CBOW: predicts the current word based on the context
+        * SkipGram: predicts the surrounding words given the current word
+    * Tested on several semantic and syntactic tasks
  
 ### Machine translation 
-* [ Neural  machine  translation  by jointly  learning  to  align  and  translate](https://arxiv.org/pdf/1409.0473.pdf)
+* [ Neural  machine  translation  by jointly  learning  to  align  and  translate (2016)](https://arxiv.org/pdf/1409.0473.pdf)
     * Previous models: RNN encoder-decoder
         * An encoder reads the input into a vector c
 	* A decoder predicts the next word given the context vector c and previously generated words
@@ -49,9 +43,9 @@
 	      * Alignment model: score is based on the RNN hidden state and the annotation of the input sentence
     * Experiment: WMT'14 English-French
 
-* [ Pointing the Unknown Words ](https://arxiv.org/abs/1603.08148)
+* [ Pointing the Unknown Words (2016)](https://arxiv.org/abs/1603.08148)
     * Proposed method: Attention based model with two softmax layers to deal with rare/unknown words
-    * Baseline: Neural Translation Modeul with attention
+    * Baseline: Neural Translation Model with attention
     * Pointer Softmax (PS):
         * can predict whether it is necessary to use the pointing
         * can point any location of the context sequence (length varies)
@@ -65,7 +59,31 @@
 
 ### Text Summarization
 
-* [ A Neural Attention Model for Abstractive Sentence Summarization](https://arxiv.org/abs/1509.00685)
+* [Get To The Point: Summarization with Pointer-Generator Networks (2017)](https://arxiv.org/abs/1704.04368)
+    * Pointer generator model with coverage
+    * Baseline is sequence to sequence attention model
+    * The PointerGenerator model is a hybrid between the baseline and the pointer networks
+    * The covarge is added to overcome the repetition problem of seq2seq models
+    * Dataset: CNN/Daily Mail
+    * PointerGenerator is better than baseline and the abstractive models, but extractive models are still better on Rouge score.
+    
+* [ Abstractive Sentence Summarization with Attentive Recurrent Neural Networks (2016)](http://www.aclweb.org/anthology/N16-1012)
+    * A convolutional attention-based conditional RNN
+    * The model called Recurrent Attentive Summarizer (RAS)
+    * The model can be seen as an extension of Rush et al. 2015 (ABS)
+        * Different from ABS, the encoder is a RNN.
+    * RAS has a recurrent decoder,an attentive encoder and a beam search
+    * Dataset: Gigaword, DUC 2004
+    * RAS achieves better results than ABS
+
+* [Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond (2016)](https://arxiv.org/pdf/1602.06023.pdf)
+    * Attentional encoder-decoder RNN 
+    * To handle the bottleneck at softmax: the decoder vocabulary is restricted to the words in the source documents at each minibatch
+    * Feature rich encoder: TF, IDF, Pos, NER added to the word features 
+    * a switch added to indicate either choose from the source document or choose from the vocabulary 
+    * Dataset: Gigaword, DUC, CNN/Daily Mail
+
+* [ A Neural Attention Model for Abstractive Sentence Summarization (2015)](https://arxiv.org/abs/1509.00685)
     * Model generates each word of the summary conditioned on the input sentence.
     * From all possible summaries, model finds the summary that have the max probability
     given that previously generated words and input.
@@ -75,35 +93,10 @@
 	    * Generation: beam-search
         * Training: loss function is negative log likelihood
     * Experiments: DUC 2003-2004, Gigaword
-
-
-* [ Abstractive Sentence Summarization with Attentive Recurrent Neural Networks](http://www.aclweb.org/anthology/N16-1012)
-    * A convolutional attention-based conditional RNN
-    * The model called Recurrent Attentive Summarizer (RAS)
-    * The model can be seen as an extension of Rush et al. 2015 (ABS)
-        * Different from ABS, the encoder is a RNN.
-    * RAS has a recurrent decoder,an attentive encoder and a beam search
-    * Dataset: Gigaword, DUC 2004
-    * RAS achieves better results than ABS
-
-* [Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/abs/1704.04368)
-    * Pointer generator model with coverage
-    * Baseline is sequence to sequence attention model
-    * The PointerGenerator model is a hybrid between the baseline and the pointer networks
-    * The covarge is added to overcome the repetition problem of seq2seq models
-    * Dataset: CNN/Daily Mail
-    * PointerGenerator is better than baseline and the abstractive models, but extractive models are still better on Rouge score.
-
-* [Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond (2016)](https://arxiv.org/pdf/1602.06023.pdf)
-    * Attentional encoder-decoder RNN 
-    * To handle the bottleneck at softmax: the decoder vocabulary is restricted to the words in the source documents at each minibatch
-    * Feature rich encoder: TF, IDF, Pos, NER added to the word features 
-    * a switch added to indicate either choose from the source document or choose from the vocabulary 
-    * Dataset: Gigaword, DUC, CNN/Daily Mail
     
 ### Question-Answering / Reading Comprehension
 
-* [R-NET: Machine Reading Comprehension with Self-matching Networks ](https://www.microsoft.com/en-us/research/publication/mrc/)
+* [R-NET: Machine Reading Comprehension with Self-matching Networks (2017)](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf)
     * An end-to-end neural network for reading comprehension and question answering
     * Model consists of :
         * A RNN encoder to build the representation for questions and passage: biRNN with GRU, also
@@ -114,7 +107,7 @@
     * Training: Initialization with Glove, 1-layer biGRU for character embeddings, 3-layer RNN for word embeddings
     * Datasets: Squad, MS-Marco
 
-* [Attention-over-Attention Neural Networks for Reading Comprehension(2017)](https://arxiv.org/pdf/1607.04423.pdf)
+* [Attention-over-Attention Neural Networks for Reading Comprehension (2017)](https://arxiv.org/pdf/1607.04423.pdf)
     * Task: Cloze-stype RC, there are triples as (Document,Query,Answer)
     * Attention over document-level attention
     * Model consists of:
@@ -132,3 +125,11 @@
     * Model has 3 layers: LSTM preprocessing (for embeddings), Match LSTM (shows the degree of matching between a token of a passage and a token of the question), Answer Pointer (based PointerNetworks)
     * Experiments: Initialization with glove, embeddings are not learned 
     * Dataset: Squad  ==> Results: F1 77%, exact Match 67.6%
+    
+* [ Pointer Networks (2015)](http://papers.nips.cc/paper/5866-pointer-networks.pdf)
+    * PtrNet is a variation of sequence-to-sequence models with attention
+    * Baseline: seq2seq and input-attention models
+    * The output of PtrNet is discrete and the length depends on the input's length
+    * Problems: Convex Hull, Delaunay Triangulation, TSP
+    * Additional Info: [Introduction to pointer networks](http://fastml.com/introduction-to-pointer-networks/) 
+
