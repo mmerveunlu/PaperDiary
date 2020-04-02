@@ -5,6 +5,14 @@
         * CBOW: predicts the current word based on the context
         * SkipGram: predicts the surrounding words given the current word
     * Tested on several semantic and syntactic tasks
+* [ALBERT:A Lite BERT for Self-Supervised Learning of Language Representations(2020)](https://arxiv.org/pdf/1909.11942.pdf)
+    * proposed 2 parameter reduction techniques for BERT and achieve better performance
+        * Factorized embedding parameterization: decomposing embeddings into two smaller matrices
+	* Cross-layer parameter sharing:  sharing parameters across FFN layers and attention layers
+    * Instead of Next-sentence prediction of BERT, proposed sentence-order prediction
+        * two consecutive segments form the same document as positive
+	* swapped version of the positive example as negative
+    * Overall: with less parameters (70%) than BERT, improvements on tasks SQuAD, MNLI, SST-2, RACE 
 
 * [BERT: Pre-training of Deep Bidirectional Transformers forLanguage Understanding](https://arxiv.org/abs/1810.04805)
     * Language model representation with multilayer bidirectional transformer encoder
