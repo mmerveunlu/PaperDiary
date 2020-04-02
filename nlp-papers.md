@@ -14,8 +14,7 @@
         * Next Sentence Prediction: to understand sentence relations, predict if a sentence is the actual next sentence or not
     * Fine-tuning: for a task, plug the task specific input/output and fine-tune all parameters
         * QA: input question and passage as a single pack, tested in Squad v1.1 and v2.0
-
-	* GLUE, SWAG
+        * GLUE, SWAG
 * [Improving Language Understandingby Generative Pre-Training (2018)](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
     * Semi-supervised learning for language understandung with multilayer Transformer decoders
     * Unsupervised pre-training with multilayer Transformers instead of LSTM, to capture longer range linguistic structure
